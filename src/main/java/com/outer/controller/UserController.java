@@ -18,9 +18,9 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
 
 
-    static final String branchUrl = "dubbo://127.0.0.1:20881";
+    static final String BRANCH_URL = "dubbo://127.0.0.1:20881";
 
-    @Reference(url = branchUrl)
+    @Reference(url = BRANCH_URL)
     UserService userService;
 
     @ApiOperation(value = "新增用户信息", notes = "新增用户信息")
