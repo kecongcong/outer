@@ -21,6 +21,7 @@ spring:
       consumer:
         check: false
         timeout: 300000
+      url: dubbo://127.0.0.1:20881
 #默认关闭redis的检查
 management:
   health:

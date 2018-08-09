@@ -6,6 +6,7 @@ import com.inner.api.service.UserService;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -17,11 +18,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/user")
 public class UserController {
 
-
-    static final String BRANCH_URL = "dubbo://127.0.0.1:20881";
-
-    @Reference(url = BRANCH_URL)
-    UserService userService;
+    @Reference
+    private UserService userService;
 
     @ApiOperation(value = "新增用户信息", notes = "新增用户信息")
     @ApiImplicitParam(name = "user", value = "用户详细实体", required = true, dataType = "User")
