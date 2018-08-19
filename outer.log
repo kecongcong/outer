@@ -1,47 +1,812 @@
-2018-08-12 16:28:20.709  INFO 29364 --- [main] com.outer.OuterApplication               : Starting OuterApplication on PC-201806231410 with PID 29364 (F:\workspace\outer\target\classes started by kecc in F:\workspace\outer)
-2018-08-12 16:28:20.715  INFO 29364 --- [main] com.outer.OuterApplication               : No active profile set, falling back to default profiles: default
-2018-08-12 16:28:20.857  INFO 29364 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5ef6ae06: startup date [Sun Aug 12 16:28:20 CST 2018]; root of context hierarchy
-2018-08-12 16:28:22.201  INFO 29364 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2018-08-12 16:28:22.670  INFO 29364 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.context.properties.ConversionServiceDeducer$Factory' of type [org.springframework.boot.context.properties.ConversionServiceDeducer$Factory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-08-12 16:28:22.701  INFO 29364 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.dubbo-com.alibaba.dubbo.spring.boot.DubboProperties' of type [com.alibaba.dubbo.spring.boot.DubboProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-08-12 16:28:22.701  INFO 29364 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.dubbo.spring.boot.DubboConsumerAutoConfiguration' of type [com.alibaba.dubbo.spring.boot.DubboConsumerAutoConfiguration$$EnhancerBySpringCGLIB$$f2209813] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-08-12 16:28:23.170  INFO 29364 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6001 (http)
-2018-08-12 16:28:23.201  INFO 29364 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2018-08-12 16:28:23.201  INFO 29364 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
-2018-08-12 16:28:23.201  INFO 29364 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [F:\Tools\JDK\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;F:\Tools\JDK\jdk1.8.0_161\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;.]
-2018-08-12 16:28:23.342  INFO 29364 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2018-08-12 16:28:23.342  INFO 29364 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2485 ms
-2018-08-12 16:28:24.482  INFO 29364 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-08-12 16:28:24.482  INFO 29364 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webMvcMetricsFilter' to: [/*]
-2018-08-12 16:28:24.482  INFO 29364 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-08-12 16:28:24.482  INFO 29364 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-08-12 16:28:24.482  INFO 29364 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2018-08-12 16:28:24.482  INFO 29364 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpTraceFilter' to: [/*]
-2018-08-12 16:28:24.482  INFO 29364 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2018-08-12 16:28:25.404  INFO 29364 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/add],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public int com.outer.controller.UserController.addUser(com.inner.api.bean.User)
-2018-08-12 16:28:25.404  INFO 29364 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/all/{pageNum}/{pageSize}],methods=[GET]}" onto public java.lang.Object com.outer.controller.UserController.findAllUser(int,int)
-2018-08-12 16:28:25.404  INFO 29364 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
-2018-08-12 16:28:25.404  INFO 29364 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
-2018-08-12 16:28:25.404  INFO 29364 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
-2018-08-12 16:28:25.404  INFO 29364 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
-2018-08-12 16:28:25.420  INFO 29364 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-08-12 16:28:25.420  INFO 29364 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-08-12 16:28:25.514  INFO 29364 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2018-08-12 16:28:25.529  INFO 29364 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
-2018-08-12 16:28:25.529  INFO 29364 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
-2018-08-12 16:28:25.545  INFO 29364 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-08-12 16:28:25.795  INFO 29364 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-08-12 16:28:25.998  INFO 29364 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5ef6ae06: startup date [Sun Aug 12 16:28:20 CST 2018]; root of context hierarchy
-2018-08-12 16:28:26.076  INFO 29364 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-08-12 16:28:26.076  INFO 29364 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-08-12 16:28:26.592  WARN 29364 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
-2018-08-12 16:28:26.654  INFO 29364 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2018-08-12 16:28:26.654  INFO 29364 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
-2018-08-12 16:28:26.654  INFO 29364 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2018-08-12 16:28:26.686  INFO 29364 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2018-08-12 16:28:26.701  INFO 29364 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2018-08-12 16:28:26.748  INFO 29364 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 6001 (http) with context path ''
-2018-08-12 16:28:26.748  INFO 29364 --- [main] com.outer.OuterApplication               : Started OuterApplication in 7.409 seconds (JVM running for 8.697)
-2018-08-12 16:28:27.326  INFO 29364 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2018-08-12 16:28:27.326  INFO 29364 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2018-08-12 16:28:27.357  INFO 29364 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+2018-08-19 15:22:57.886  INFO 15408 --- [main] com.outer.OuterApplication               : Starting OuterApplication on PC-201806231410 with PID 15408 (F:\workspace\outer\target\classes started by kecc in F:\workspace\outer)
+2018-08-19 15:22:57.900  INFO 15408 --- [main] com.outer.OuterApplication               : No active profile set, falling back to default profiles: default
+2018-08-19 15:22:58.000  INFO 15408 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@42721fe: startup date [Sun Aug 19 15:22:58 CST 2018]; root of context hierarchy
+2018-08-19 15:22:59.426  INFO 15408 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-08-19 15:22:59.953  INFO 15408 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.context.properties.ConversionServiceDeducer$Factory' of type [org.springframework.boot.context.properties.ConversionServiceDeducer$Factory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-19 15:22:59.990  INFO 15408 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.dubbo-com.alibaba.dubbo.spring.boot.DubboProperties' of type [com.alibaba.dubbo.spring.boot.DubboProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-19 15:22:59.991  INFO 15408 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.dubbo.spring.boot.DubboConsumerAutoConfiguration' of type [com.alibaba.dubbo.spring.boot.DubboConsumerAutoConfiguration$$EnhancerBySpringCGLIB$$4ad8defb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-19 15:23:00.553  INFO 15408 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6001 (http)
+2018-08-19 15:23:00.588  INFO 15408 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-19 15:23:00.589  INFO 15408 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-08-19 15:23:00.597  INFO 15408 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [F:\Tools\JDK\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;F:\Tools\JDK\jdk1.8.0_161\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;.]
+2018-08-19 15:23:00.754  INFO 15408 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-19 15:23:00.754  INFO 15408 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2754 ms
+2018-08-19 15:23:01.961  INFO 15408 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-19 15:23:01.962  INFO 15408 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2018-08-19 15:23:01.962  INFO 15408 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-19 15:23:01.962  INFO 15408 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-19 15:23:01.962  INFO 15408 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-19 15:23:01.963  INFO 15408 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpTraceFilter' to: [/*]
+2018-08-19 15:23:01.963  INFO 15408 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-19 15:23:02.319  INFO 15408 --- [ZkClient-EventThread-42-127.0.0.1:2161] org.I0Itec.zkclient.ZkEventThread        : Starting ZkClient event thread.
+2018-08-19 15:23:02.323  INFO 15408 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:zookeeper.version=3.4.8--1, built on 02/06/2016 03:18 GMT
+2018-08-19 15:23:02.324  INFO 15408 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:host.name=PC-201806231410
+2018-08-19 15:23:02.324  INFO 15408 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.version=1.8.0_161
+2018-08-19 15:23:02.324  INFO 15408 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.vendor=Oracle Corporation
+2018-08-19 15:23:02.324  INFO 15408 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.home=F:\Tools\JDK\jdk1.8.0_161\jre
+2018-08-19 15:23:02.324  INFO 15408 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.class.path=F:\Tools\JDK\jdk1.8.0_161\jre\lib\charsets.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\deploy.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\access-bridge-64.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\cldrdata.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\dnsns.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\jaccess.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\jfxrt.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\localedata.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\nashorn.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\sunec.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\sunjce_provider.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\sunmscapi.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\sunpkcs11.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\zipfs.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\javaws.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\jce.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\jfr.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\jfxswt.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\jsse.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\management-agent.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\plugin.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\resources.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\rt.jar;F:\workspace\outer\target\classes;F:\mvn-repos\repos\org\springframework\spring-beans\5.0.8.RELEASE\spring-beans-5.0.8.RELEASE.jar;F:\mvn-repos\repos\mysql\mysql-connector-java\5.1.46\mysql-connector-java-5.1.46.jar;F:\mvn-repos\repos\com\alibaba\druid\1.1.0\druid-1.1.0.jar;F:\mvn-repos\repos\com\alibaba\fastjson\1.2.15\fastjson-1.2.15.jar;F:\mvn-repos\repos\com\github\pagehelper\pagehelper\4.1.6\pagehelper-4.1.6.jar;F:\mvn-repos\repos\com\github\jsqlparser\jsqlparser\0.9.5\jsqlparser-0.9.5.jar;F:\mvn-repos\repos\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.9.6\jackson-dataformat-yaml-2.9.6.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-redis\1.4.7.RELEASE\spring-boot-starter-redis-1.4.7.RELEASE.jar;F:\mvn-repos\repos\org\springframework\data\spring-data-redis\2.0.9.RELEASE\spring-data-redis-2.0.9.RELEASE.jar;F:\mvn-repos\repos\org\springframework\data\spring-data-keyvalue\2.0.9.RELEASE\spring-data-keyvalue-2.0.9.RELEASE.jar;F:\mvn-repos\repos\org\springframework\data\spring-data-commons\2.0.9.RELEASE\spring-data-commons-2.0.9.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-tx\5.0.8.RELEASE\spring-tx-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-oxm\5.0.8.RELEASE\spring-oxm-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-context-support\5.0.8.RELEASE\spring-context-support-5.0.8.RELEASE.jar;F:\mvn-repos\repos\redis\clients\jedis\2.9.0\jedis-2.9.0.jar;F:\mvn-repos\repos\org\apache\commons\commons-pool2\2.5.0\commons-pool2-2.5.0.jar;F:\mvn-repos\repos\org\mybatis\spring\boot\mybatis-spring-boot-starter\1.3.1\mybatis-spring-boot-starter-1.3.1.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-jdbc\2.0.4.RELEASE\spring-boot-starter-jdbc-2.0.4.RELEASE.jar;F:\mvn-repos\repos\com\zaxxer\HikariCP\2.7.9\HikariCP-2.7.9.jar;F:\mvn-repos\repos\org\springframework\spring-jdbc\5.0.8.RELEASE\spring-jdbc-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\mybatis\spring\boot\mybatis-spring-boot-autoconfigure\1.3.1\mybatis-spring-boot-autoconfigure-1.3.1.jar;F:\mvn-repos\repos\org\mybatis\mybatis\3.4.5\mybatis-3.4.5.jar;F:\mvn-repos\repos\org\mybatis\mybatis-spring\1.3.1\mybatis-spring-1.3.1.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-web\2.0.4.RELEASE\spring-boot-starter-web-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter\2.0.4.RELEASE\spring-boot-starter-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot\2.0.4.RELEASE\spring-boot-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-autoconfigure\2.0.4.RELEASE\spring-boot-autoconfigure-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-logging\2.0.4.RELEASE\spring-boot-starter-logging-2.0.4.RELEASE.jar;F:\mvn-repos\repos\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;F:\mvn-repos\repos\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;F:\mvn-repos\repos\org\apache\logging\log4j\log4j-to-slf4j\2.10.0\log4j-to-slf4j-2.10.0.jar;F:\mvn-repos\repos\org\apache\logging\log4j\log4j-api\2.10.0\log4j-api-2.10.0.jar;F:\mvn-repos\repos\org\slf4j\jul-to-slf4j\1.7.25\jul-to-slf4j-1.7.25.jar;F:\mvn-repos\repos\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar;F:\mvn-repos\repos\org\springframework\spring-core\5.0.8.RELEASE\spring-core-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-jcl\5.0.8.RELEASE\spring-jcl-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\yaml\snakeyaml\1.19\snakeyaml-1.19.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-json\2.0.4.RELEASE\spring-boot-starter-json-2.0.4.RELEASE.jar;F:\mvn-repos\repos\com\fasterxml\jackson\core\jackson-databind\2.9.6\jackson-databind-2.9.6.jar;F:\mvn-repos\repos\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;F:\mvn-repos\repos\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.9.6\jackson-datatype-jdk8-2.9.6.jar;F:\mvn-repos\repos\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.9.6\jackson-datatype-jsr310-2.9.6.jar;F:\mvn-repos\repos\com\fasterxml\jackson\module\jackson-module-parameter-names\2.9.6\jackson-module-parameter-names-2.9.6.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-tomcat\2.0.4.RELEASE\spring-boot-starter-tomcat-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\apache\tomcat\embed\tomcat-embed-core\8.5.32\tomcat-embed-core-8.5.32.jar;F:\mvn-repos\repos\org\apache\tomcat\embed\tomcat-embed-el\8.5.32\tomcat-embed-el-8.5.32.jar;F:\mvn-repos\repos\org\apache\tomcat\embed\tomcat-embed-websocket\8.5.32\tomcat-embed-websocket-8.5.32.jar;F:\mvn-repos\repos\org\hibernate\validator\hibernate-validator\6.0.11.Final\hibernate-validator-6.0.11.Final.jar;F:\mvn-repos\repos\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar;F:\mvn-repos\repos\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar;F:\mvn-repos\repos\com\fasterxml\classmate\1.3.4\classmate-1.3.4.jar;F:\mvn-repos\repos\org\springframework\spring-web\5.0.8.RELEASE\spring-web-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-webmvc\5.0.8.RELEASE\spring-webmvc-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-aop\5.0.8.RELEASE\spring-aop-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-context\5.0.8.RELEASE\spring-context-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-expression\5.0.8.RELEASE\spring-expression-5.0.8.RELEASE.jar;F:\mvn-repos\repos\com\inner\base\inner-base-api\0.0.1-SNAPSHOT\inner-base-api-0.0.1-SNAPSHOT.jar;F:\Tools\JDK\jdk1.8.0_161\lib\jconsole.jar;F:\Tools\JDK\jdk1.8.0_161\lib\tools.jar;F:\mvn-repos\repos\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;F:\mvn-repos\repos\com\fasterxml\jackson\core\jackson-core\2.9.6\jackson-core-2.9.6.jar;F:\mvn-repos\repos\io\springfox\springfox-swagger2\2.6.1\springfox-swagger2-2.6.1.jar;F:\mvn-repos\repos\io\swagger\swagger-annotations\1.5.10\swagger-annotations-1.5.10.jar;F:\mvn-repos\repos\io\swagger\swagger-models\1.5.10\swagger-models-1.5.10.jar;F:\mvn-repos\repos\io\springfox\springfox-spi\2.6.1\springfox-spi-2.6.1.jar;F:\mvn-repos\repos\io\springfox\springfox-core\2.6.1\springfox-core-2.6.1.jar;F:\mvn-repos\repos\io\springfox\springfox-schema\2.6.1\springfox-schema-2.6.1.jar;F:\mvn-repos\repos\io\springfox\springfox-swagger-common\2.6.1\springfox-swagger-common-2.6.1.jar;F:\mvn-repos\repos\io\springfox\springfox-spring-web\2.6.1\springfox-spring-web-2.6.1.jar;F:\mvn-repos\repos\com\google\guava\guava\18.0\guava-18.0.jar;F:\mvn-repos\repos\org\springframework\plugin\spring-plugin-core\1.2.0.RELEASE\spring-plugin-core-1.2.0.RELEASE.jar;F:\mvn-repos\repos\org\springframework\plugin\spring-plugin-metadata\1.2.0.RELEASE\spring-plugin-metadata-1.2.0.RELEASE.jar;F:\mvn-repos\repos\org\mapstruct\mapstruct\1.0.0.Final\mapstruct-1.0.0.Final.jar;F:\mvn-repos\repos\io\springfox\springfox-swagger-ui\2.6.1\springfox-swagger-ui-2.6.1.jar;F:\mvn-repos\repos\org\projectlombok\lombok\1.16.22\lombok-1.16.22.jar;F:\mvn-repos\repos\com\alibaba\spring\boot\dubbo-spring-boot-starter\2.0.0\dubbo-spring-boot-starter-2.0.0.jar;F:\mvn-repos\repos\com\alibaba\dubbo\2.6.0\dubbo-2.6.0.jar;F:\mvn-repos\repos\org\javassist\javassist\3.20.0-GA\javassist-3.20.0-GA.jar;F:\mvn-repos\repos\org\jboss\netty\netty\3.2.5.Final\netty-3.2.5.Final.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-actuator\2.0.4.RELEASE\spring-boot-starter-actuator-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-actuator-autoconfigure\2.0.4.RELEASE\spring-boot-actuator-autoconfigure-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-actuator\2.0.4.RELEASE\spring-boot-actuator-2.0.4.RELEASE.jar;F:\mvn-repos\repos\io\micrometer\micrometer-core\1.0.6\micrometer-core-1.0.6.jar;F:\mvn-repos\repos\org\hdrhistogram\HdrHistogram\2.1.10\HdrHistogram-2.1.10.jar;F:\mvn-repos\repos\org\latencyutils\LatencyUtils\2.0.3\LatencyUtils-2.0.3.jar;F:\mvn-repos\repos\org\apache\zookeeper\zookeeper\3.4.8\zookeeper-3.4.8.jar;F:\mvn-repos\repos\log4j\log4j\1.2.16\log4j-1.2.16.jar;F:\mvn-repos\repos\jline\jline\0.9.94\jline-0.9.94.jar;F:\mvn-repos\repos\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;F:\mvn-repos\repos\com\101tec\zkclient\0.10\zkclient-0.10.jar;F:\Tools\IDE\idea\lib\idea_rt.jar;F:\Tools\IDE\idea\lib\rt\debugger-agent.jar
+2018-08-19 15:23:02.328  INFO 15408 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.library.path=F:\Tools\JDK\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;F:\Tools\JDK\jdk1.8.0_161\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;.
+2018-08-19 15:23:02.328  INFO 15408 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
+2018-08-19 15:23:02.328  INFO 15408 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.compiler=<NA>
+2018-08-19 15:23:02.328  INFO 15408 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:os.name=Windows 10
+2018-08-19 15:23:02.328  INFO 15408 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:os.arch=amd64
+2018-08-19 15:23:02.328  INFO 15408 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:os.version=10.0
+2018-08-19 15:23:02.329  INFO 15408 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:user.name=kecc
+2018-08-19 15:23:02.329  INFO 15408 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:user.home=C:\Users\Administrator
+2018-08-19 15:23:02.329  INFO 15408 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:user.dir=F:\workspace\outer
+2018-08-19 15:23:02.330  INFO 15408 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=127.0.0.1:2161 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@437e1f8e
+2018-08-19 15:23:02.352  INFO 15408 --- [DubboZkclientConnector] org.I0Itec.zkclient.ZkClient             : Waiting for keeper state SyncConnected
+2018-08-19 15:23:02.356  INFO 15408 --- [DubboZkclientConnector-SendThread(127.0.0.1:2161)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 127.0.0.1/127.0.0.1:2161. Will not attempt to authenticate using SASL (unknown error)
+2018-08-19 15:23:02.358  INFO 15408 --- [DubboZkclientConnector-SendThread(127.0.0.1:2161)] org.apache.zookeeper.ClientCnxn          : Socket connection established to 127.0.0.1/127.0.0.1:2161, initiating session
+2018-08-19 15:23:02.374  INFO 15408 --- [DubboZkclientConnector-SendThread(127.0.0.1:2161)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server 127.0.0.1/127.0.0.1:2161, sessionid = 0x16550aade5f0006, negotiated timeout = 30000
+2018-08-19 15:23:02.377  INFO 15408 --- [DubboZkclientConnector-EventThread] org.I0Itec.zkclient.ZkClient             : zookeeper state changed (SyncConnected)
+2018-08-19 15:23:03.267  INFO 15408 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/add],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public int com.outer.controller.UserController.addUser(com.inner.api.bean.User)
+2018-08-19 15:23:03.268  INFO 15408 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/all/{pageNum}/{pageSize}],methods=[GET]}" onto public java.lang.Object com.outer.controller.UserController.findAllUser(int,int)
+2018-08-19 15:23:03.269  INFO 15408 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-08-19 15:23:03.273  INFO 15408 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-08-19 15:23:03.274  INFO 15408 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-08-19 15:23:03.275  INFO 15408 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-08-19 15:23:03.281  INFO 15408 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-19 15:23:03.281  INFO 15408 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-19 15:23:03.400  INFO 15408 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2018-08-19 15:23:03.421  INFO 15408 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2018-08-19 15:23:03.424  INFO 15408 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2018-08-19 15:23:03.424  INFO 15408 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-19 15:23:03.711  INFO 15408 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-19 15:23:04.109  INFO 15408 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@42721fe: startup date [Sun Aug 19 15:22:58 CST 2018]; root of context hierarchy
+2018-08-19 15:23:04.220  INFO 15408 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-19 15:23:04.220  INFO 15408 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-19 15:23:04.974  WARN 15408 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-08-19 15:23:05.052  INFO 15408 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-19 15:23:05.095  INFO 15408 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-08-19 15:23:05.096  INFO 15408 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2018-08-19 15:23:05.151  INFO 15408 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2018-08-19 15:23:05.216  INFO 15408 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-08-19 15:23:05.406  INFO 15408 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 6001 (http) with context path ''
+2018-08-19 15:23:05.424  INFO 15408 --- [main] com.outer.OuterApplication               : Started OuterApplication in 9.019 seconds (JVM running for 10.904)
+2018-08-19 15:23:06.079  INFO 15408 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-19 15:23:06.079  INFO 15408 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-19 15:23:06.110  INFO 15408 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+2018-08-19 15:23:45.430 ERROR 15408 --- [http-nio-6001-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.inner.service.dao.UserMapper.selectAllUser
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.inner.service.dao.UserMapper.selectAllUser
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:225)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:48)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:65)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy101.selectAllUser(Unknown Source)
+	at com.inner.service.service.UserServiceImpl.findAllUser(UserServiceImpl.java:48)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:45)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:71)
+	at com.alibaba.dubbo.config.invoker.DelegateProviderMetaDataInvoker.invoke(DelegateProviderMetaDataInvoker.java:48)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:52)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:61)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:74)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:41)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:77)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:71)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:131)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:37)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:37)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:98)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:96)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:168)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:50)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:79)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+] with root cause
+
+java.lang.RuntimeException: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.inner.service.dao.UserMapper.selectAllUser
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.inner.service.dao.UserMapper.selectAllUser
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:225)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:48)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:65)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy101.selectAllUser(Unknown Source)
+	at com.inner.service.service.UserServiceImpl.findAllUser(UserServiceImpl.java:48)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:45)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:71)
+	at com.alibaba.dubbo.config.invoker.DelegateProviderMetaDataInvoker.invoke(DelegateProviderMetaDataInvoker.java:48)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:52)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:61)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:74)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:41)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:77)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:71)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:131)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:37)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:37)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:98)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:96)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:168)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:50)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:79)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:105) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:74) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:41) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:77) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:71) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:131) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:37) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:37) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:98) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:96) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:168) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:50) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:79) ~[dubbo-2.6.0.jar:2.6.0]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_161]
+
+2018-08-19 15:48:32.155  INFO 28948 --- [main] com.outer.OuterApplication               : Starting OuterApplication on PC-201806231410 with PID 28948 (F:\workspace\outer\target\classes started by kecc in F:\workspace\outer)
+2018-08-19 15:48:32.155  INFO 28948 --- [main] com.outer.OuterApplication               : No active profile set, falling back to default profiles: default
+2018-08-19 15:48:32.233  INFO 28948 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@37ddb69a: startup date [Sun Aug 19 15:48:32 CST 2018]; root of context hierarchy
+2018-08-19 15:48:33.515  INFO 28948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-08-19 15:48:33.937  INFO 28948 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.context.properties.ConversionServiceDeducer$Factory' of type [org.springframework.boot.context.properties.ConversionServiceDeducer$Factory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-19 15:48:33.968  INFO 28948 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.dubbo-com.alibaba.dubbo.spring.boot.DubboProperties' of type [com.alibaba.dubbo.spring.boot.DubboProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-19 15:48:33.968  INFO 28948 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.dubbo.spring.boot.DubboConsumerAutoConfiguration' of type [com.alibaba.dubbo.spring.boot.DubboConsumerAutoConfiguration$$EnhancerBySpringCGLIB$$4d55b6d0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-19 15:48:34.391  INFO 28948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6001 (http)
+2018-08-19 15:48:34.422  INFO 28948 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-19 15:48:34.422  INFO 28948 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-08-19 15:48:34.438  INFO 28948 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [F:\Tools\JDK\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;F:\Tools\JDK\jdk1.8.0_161\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;.]
+2018-08-19 15:48:34.547  INFO 28948 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-19 15:48:34.547  INFO 28948 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2314 ms
+2018-08-19 15:48:35.406  INFO 28948 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-19 15:48:35.406  INFO 28948 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2018-08-19 15:48:35.406  INFO 28948 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-19 15:48:35.406  INFO 28948 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-19 15:48:35.406  INFO 28948 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-19 15:48:35.406  INFO 28948 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpTraceFilter' to: [/*]
+2018-08-19 15:48:35.406  INFO 28948 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-19 15:48:35.671  INFO 28948 --- [ZkClient-EventThread-41-127.0.0.1:2161] org.I0Itec.zkclient.ZkEventThread        : Starting ZkClient event thread.
+2018-08-19 15:48:35.671  INFO 28948 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:zookeeper.version=3.4.8--1, built on 02/06/2016 03:18 GMT
+2018-08-19 15:48:35.671  INFO 28948 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:host.name=PC-201806231410
+2018-08-19 15:48:35.671  INFO 28948 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.version=1.8.0_161
+2018-08-19 15:48:35.671  INFO 28948 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.vendor=Oracle Corporation
+2018-08-19 15:48:35.671  INFO 28948 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.home=F:\Tools\JDK\jdk1.8.0_161\jre
+2018-08-19 15:48:35.671  INFO 28948 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.class.path=F:\Tools\JDK\jdk1.8.0_161\jre\lib\charsets.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\deploy.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\access-bridge-64.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\cldrdata.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\dnsns.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\jaccess.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\jfxrt.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\localedata.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\nashorn.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\sunec.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\sunjce_provider.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\sunmscapi.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\sunpkcs11.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\zipfs.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\javaws.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\jce.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\jfr.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\jfxswt.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\jsse.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\management-agent.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\plugin.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\resources.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\rt.jar;F:\workspace\outer\target\classes;F:\mvn-repos\repos\org\springframework\spring-beans\5.0.8.RELEASE\spring-beans-5.0.8.RELEASE.jar;F:\mvn-repos\repos\mysql\mysql-connector-java\5.1.46\mysql-connector-java-5.1.46.jar;F:\mvn-repos\repos\com\alibaba\druid\1.1.0\druid-1.1.0.jar;F:\mvn-repos\repos\com\alibaba\fastjson\1.2.15\fastjson-1.2.15.jar;F:\mvn-repos\repos\com\github\pagehelper\pagehelper\4.1.6\pagehelper-4.1.6.jar;F:\mvn-repos\repos\com\github\jsqlparser\jsqlparser\0.9.5\jsqlparser-0.9.5.jar;F:\mvn-repos\repos\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.9.6\jackson-dataformat-yaml-2.9.6.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-redis\1.4.7.RELEASE\spring-boot-starter-redis-1.4.7.RELEASE.jar;F:\mvn-repos\repos\org\springframework\data\spring-data-redis\2.0.9.RELEASE\spring-data-redis-2.0.9.RELEASE.jar;F:\mvn-repos\repos\org\springframework\data\spring-data-keyvalue\2.0.9.RELEASE\spring-data-keyvalue-2.0.9.RELEASE.jar;F:\mvn-repos\repos\org\springframework\data\spring-data-commons\2.0.9.RELEASE\spring-data-commons-2.0.9.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-tx\5.0.8.RELEASE\spring-tx-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-oxm\5.0.8.RELEASE\spring-oxm-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-context-support\5.0.8.RELEASE\spring-context-support-5.0.8.RELEASE.jar;F:\mvn-repos\repos\redis\clients\jedis\2.9.0\jedis-2.9.0.jar;F:\mvn-repos\repos\org\apache\commons\commons-pool2\2.5.0\commons-pool2-2.5.0.jar;F:\mvn-repos\repos\org\mybatis\spring\boot\mybatis-spring-boot-starter\1.3.1\mybatis-spring-boot-starter-1.3.1.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-jdbc\2.0.4.RELEASE\spring-boot-starter-jdbc-2.0.4.RELEASE.jar;F:\mvn-repos\repos\com\zaxxer\HikariCP\2.7.9\HikariCP-2.7.9.jar;F:\mvn-repos\repos\org\springframework\spring-jdbc\5.0.8.RELEASE\spring-jdbc-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\mybatis\spring\boot\mybatis-spring-boot-autoconfigure\1.3.1\mybatis-spring-boot-autoconfigure-1.3.1.jar;F:\mvn-repos\repos\org\mybatis\mybatis\3.4.5\mybatis-3.4.5.jar;F:\mvn-repos\repos\org\mybatis\mybatis-spring\1.3.1\mybatis-spring-1.3.1.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-web\2.0.4.RELEASE\spring-boot-starter-web-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter\2.0.4.RELEASE\spring-boot-starter-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot\2.0.4.RELEASE\spring-boot-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-autoconfigure\2.0.4.RELEASE\spring-boot-autoconfigure-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-logging\2.0.4.RELEASE\spring-boot-starter-logging-2.0.4.RELEASE.jar;F:\mvn-repos\repos\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;F:\mvn-repos\repos\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;F:\mvn-repos\repos\org\apache\logging\log4j\log4j-to-slf4j\2.10.0\log4j-to-slf4j-2.10.0.jar;F:\mvn-repos\repos\org\apache\logging\log4j\log4j-api\2.10.0\log4j-api-2.10.0.jar;F:\mvn-repos\repos\org\slf4j\jul-to-slf4j\1.7.25\jul-to-slf4j-1.7.25.jar;F:\mvn-repos\repos\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar;F:\mvn-repos\repos\org\springframework\spring-core\5.0.8.RELEASE\spring-core-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-jcl\5.0.8.RELEASE\spring-jcl-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\yaml\snakeyaml\1.19\snakeyaml-1.19.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-json\2.0.4.RELEASE\spring-boot-starter-json-2.0.4.RELEASE.jar;F:\mvn-repos\repos\com\fasterxml\jackson\core\jackson-databind\2.9.6\jackson-databind-2.9.6.jar;F:\mvn-repos\repos\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;F:\mvn-repos\repos\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.9.6\jackson-datatype-jdk8-2.9.6.jar;F:\mvn-repos\repos\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.9.6\jackson-datatype-jsr310-2.9.6.jar;F:\mvn-repos\repos\com\fasterxml\jackson\module\jackson-module-parameter-names\2.9.6\jackson-module-parameter-names-2.9.6.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-tomcat\2.0.4.RELEASE\spring-boot-starter-tomcat-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\apache\tomcat\embed\tomcat-embed-core\8.5.32\tomcat-embed-core-8.5.32.jar;F:\mvn-repos\repos\org\apache\tomcat\embed\tomcat-embed-el\8.5.32\tomcat-embed-el-8.5.32.jar;F:\mvn-repos\repos\org\apache\tomcat\embed\tomcat-embed-websocket\8.5.32\tomcat-embed-websocket-8.5.32.jar;F:\mvn-repos\repos\org\hibernate\validator\hibernate-validator\6.0.11.Final\hibernate-validator-6.0.11.Final.jar;F:\mvn-repos\repos\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar;F:\mvn-repos\repos\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar;F:\mvn-repos\repos\com\fasterxml\classmate\1.3.4\classmate-1.3.4.jar;F:\mvn-repos\repos\org\springframework\spring-web\5.0.8.RELEASE\spring-web-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-webmvc\5.0.8.RELEASE\spring-webmvc-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-aop\5.0.8.RELEASE\spring-aop-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-context\5.0.8.RELEASE\spring-context-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-expression\5.0.8.RELEASE\spring-expression-5.0.8.RELEASE.jar;F:\mvn-repos\repos\com\inner\base\inner-base-api\0.0.1-SNAPSHOT\inner-base-api-0.0.1-SNAPSHOT.jar;F:\Tools\JDK\jdk1.8.0_161\lib\jconsole.jar;F:\Tools\JDK\jdk1.8.0_161\lib\tools.jar;F:\mvn-repos\repos\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;F:\mvn-repos\repos\com\fasterxml\jackson\core\jackson-core\2.9.6\jackson-core-2.9.6.jar;F:\mvn-repos\repos\io\springfox\springfox-swagger2\2.6.1\springfox-swagger2-2.6.1.jar;F:\mvn-repos\repos\io\swagger\swagger-annotations\1.5.10\swagger-annotations-1.5.10.jar;F:\mvn-repos\repos\io\swagger\swagger-models\1.5.10\swagger-models-1.5.10.jar;F:\mvn-repos\repos\io\springfox\springfox-spi\2.6.1\springfox-spi-2.6.1.jar;F:\mvn-repos\repos\io\springfox\springfox-core\2.6.1\springfox-core-2.6.1.jar;F:\mvn-repos\repos\io\springfox\springfox-schema\2.6.1\springfox-schema-2.6.1.jar;F:\mvn-repos\repos\io\springfox\springfox-swagger-common\2.6.1\springfox-swagger-common-2.6.1.jar;F:\mvn-repos\repos\io\springfox\springfox-spring-web\2.6.1\springfox-spring-web-2.6.1.jar;F:\mvn-repos\repos\com\google\guava\guava\18.0\guava-18.0.jar;F:\mvn-repos\repos\org\springframework\plugin\spring-plugin-core\1.2.0.RELEASE\spring-plugin-core-1.2.0.RELEASE.jar;F:\mvn-repos\repos\org\springframework\plugin\spring-plugin-metadata\1.2.0.RELEASE\spring-plugin-metadata-1.2.0.RELEASE.jar;F:\mvn-repos\repos\org\mapstruct\mapstruct\1.0.0.Final\mapstruct-1.0.0.Final.jar;F:\mvn-repos\repos\io\springfox\springfox-swagger-ui\2.6.1\springfox-swagger-ui-2.6.1.jar;F:\mvn-repos\repos\org\projectlombok\lombok\1.16.22\lombok-1.16.22.jar;F:\mvn-repos\repos\com\alibaba\spring\boot\dubbo-spring-boot-starter\2.0.0\dubbo-spring-boot-starter-2.0.0.jar;F:\mvn-repos\repos\com\alibaba\dubbo\2.6.0\dubbo-2.6.0.jar;F:\mvn-repos\repos\org\javassist\javassist\3.20.0-GA\javassist-3.20.0-GA.jar;F:\mvn-repos\repos\org\jboss\netty\netty\3.2.5.Final\netty-3.2.5.Final.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-actuator\2.0.4.RELEASE\spring-boot-starter-actuator-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-actuator-autoconfigure\2.0.4.RELEASE\spring-boot-actuator-autoconfigure-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-actuator\2.0.4.RELEASE\spring-boot-actuator-2.0.4.RELEASE.jar;F:\mvn-repos\repos\io\micrometer\micrometer-core\1.0.6\micrometer-core-1.0.6.jar;F:\mvn-repos\repos\org\hdrhistogram\HdrHistogram\2.1.10\HdrHistogram-2.1.10.jar;F:\mvn-repos\repos\org\latencyutils\LatencyUtils\2.0.3\LatencyUtils-2.0.3.jar;F:\mvn-repos\repos\org\apache\zookeeper\zookeeper\3.4.8\zookeeper-3.4.8.jar;F:\mvn-repos\repos\log4j\log4j\1.2.16\log4j-1.2.16.jar;F:\mvn-repos\repos\jline\jline\0.9.94\jline-0.9.94.jar;F:\mvn-repos\repos\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;F:\mvn-repos\repos\com\101tec\zkclient\0.10\zkclient-0.10.jar;F:\Tools\IDE\idea\lib\idea_rt.jar;F:\Tools\IDE\idea\lib\rt\debugger-agent.jar
+2018-08-19 15:48:35.687  INFO 28948 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.library.path=F:\Tools\JDK\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;F:\Tools\JDK\jdk1.8.0_161\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;.
+2018-08-19 15:48:35.687  INFO 28948 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
+2018-08-19 15:48:35.687  INFO 28948 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.compiler=<NA>
+2018-08-19 15:48:35.687  INFO 28948 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:os.name=Windows 10
+2018-08-19 15:48:35.687  INFO 28948 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:os.arch=amd64
+2018-08-19 15:48:35.687  INFO 28948 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:os.version=10.0
+2018-08-19 15:48:35.687  INFO 28948 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:user.name=kecc
+2018-08-19 15:48:35.687  INFO 28948 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:user.home=C:\Users\Administrator
+2018-08-19 15:48:35.687  INFO 28948 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:user.dir=F:\workspace\outer
+2018-08-19 15:48:35.687  INFO 28948 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=127.0.0.1:2161 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@5f64513
+2018-08-19 15:48:35.703  INFO 28948 --- [DubboZkclientConnector] org.I0Itec.zkclient.ZkClient             : Waiting for keeper state SyncConnected
+2018-08-19 15:48:35.703  INFO 28948 --- [DubboZkclientConnector-SendThread(127.0.0.1:2161)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 127.0.0.1/127.0.0.1:2161. Will not attempt to authenticate using SASL (unknown error)
+2018-08-19 15:48:35.703  INFO 28948 --- [DubboZkclientConnector-SendThread(127.0.0.1:2161)] org.apache.zookeeper.ClientCnxn          : Socket connection established to 127.0.0.1/127.0.0.1:2161, initiating session
+2018-08-19 15:48:35.718  INFO 28948 --- [DubboZkclientConnector-SendThread(127.0.0.1:2161)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server 127.0.0.1/127.0.0.1:2161, sessionid = 0x16550aade5f0008, negotiated timeout = 30000
+2018-08-19 15:48:35.734  INFO 28948 --- [DubboZkclientConnector-EventThread] org.I0Itec.zkclient.ZkClient             : zookeeper state changed (SyncConnected)
+2018-08-19 15:48:36.421  INFO 28948 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/add],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public int com.outer.controller.UserController.addUser(com.inner.api.bean.User)
+2018-08-19 15:48:36.421  INFO 28948 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/all/{pageNum}/{pageSize}],methods=[GET]}" onto public java.lang.Object com.outer.controller.UserController.findAllUser(int,int)
+2018-08-19 15:48:36.421  INFO 28948 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-08-19 15:48:36.421  INFO 28948 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-08-19 15:48:36.421  INFO 28948 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-08-19 15:48:36.421  INFO 28948 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-08-19 15:48:36.437  INFO 28948 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-19 15:48:36.437  INFO 28948 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-19 15:48:36.562  INFO 28948 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2018-08-19 15:48:36.577  INFO 28948 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2018-08-19 15:48:36.577  INFO 28948 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2018-08-19 15:48:36.577  INFO 28948 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-19 15:48:36.875  INFO 28948 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-19 15:48:37.107  INFO 28948 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@37ddb69a: startup date [Sun Aug 19 15:48:32 CST 2018]; root of context hierarchy
+2018-08-19 15:48:37.169  INFO 28948 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-19 15:48:37.169  INFO 28948 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-19 15:48:37.655  WARN 28948 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-08-19 15:48:37.701  INFO 28948 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-19 15:48:37.717  INFO 28948 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-08-19 15:48:37.717  INFO 28948 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2018-08-19 15:48:37.740  INFO 28948 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2018-08-19 15:48:37.761  INFO 28948 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-08-19 15:48:37.810  INFO 28948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 6001 (http) with context path ''
+2018-08-19 15:48:37.810  INFO 28948 --- [main] com.outer.OuterApplication               : Started OuterApplication in 6.754 seconds (JVM running for 7.99)
+2018-08-19 15:48:38.433  INFO 28948 --- [RMI TCP Connection(6)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-19 15:48:38.433  INFO 28948 --- [RMI TCP Connection(6)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-19 15:48:38.450  INFO 28948 --- [RMI TCP Connection(6)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+2018-08-19 15:49:57.743 ERROR 28948 --- [http-nio-6001-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.inner.service.dao.UserMapper.selectAllUser
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.inner.service.dao.UserMapper.selectAllUser
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:225)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:48)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:65)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy101.selectAllUser(Unknown Source)
+	at com.inner.service.service.UserServiceImpl.findAllUser(UserServiceImpl.java:48)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:45)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:71)
+	at com.alibaba.dubbo.config.invoker.DelegateProviderMetaDataInvoker.invoke(DelegateProviderMetaDataInvoker.java:48)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:52)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:61)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:74)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:41)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:77)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:71)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:131)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:37)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:37)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:98)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:96)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:168)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:50)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:79)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+] with root cause
+
+java.lang.RuntimeException: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.inner.service.dao.UserMapper.selectAllUser
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.inner.service.dao.UserMapper.selectAllUser
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:225)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:48)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:65)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy101.selectAllUser(Unknown Source)
+	at com.inner.service.service.UserServiceImpl.findAllUser(UserServiceImpl.java:48)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:45)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:71)
+	at com.alibaba.dubbo.config.invoker.DelegateProviderMetaDataInvoker.invoke(DelegateProviderMetaDataInvoker.java:48)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:52)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:61)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:74)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:41)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:77)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:71)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:131)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:37)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:37)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:98)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:96)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:168)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:50)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:79)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:105) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:74) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:41) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:77) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:71) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:131) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:37) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:37) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:98) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:96) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:168) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:50) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:79) ~[dubbo-2.6.0.jar:2.6.0]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_161]
+
+2018-08-19 15:49:59.777 ERROR 28948 --- [http-nio-6001-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.inner.service.dao.UserMapper.selectAllUser
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.inner.service.dao.UserMapper.selectAllUser
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:225)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:48)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:65)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy101.selectAllUser(Unknown Source)
+	at com.inner.service.service.UserServiceImpl.findAllUser(UserServiceImpl.java:48)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:45)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:71)
+	at com.alibaba.dubbo.config.invoker.DelegateProviderMetaDataInvoker.invoke(DelegateProviderMetaDataInvoker.java:48)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:52)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:61)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:74)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:41)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:77)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:71)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:131)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:37)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:37)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:98)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:96)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:168)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:50)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:79)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+] with root cause
+
+java.lang.RuntimeException: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.inner.service.dao.UserMapper.selectAllUser
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.inner.service.dao.UserMapper.selectAllUser
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:225)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:48)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:65)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy101.selectAllUser(Unknown Source)
+	at com.inner.service.service.UserServiceImpl.findAllUser(UserServiceImpl.java:48)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:45)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:71)
+	at com.alibaba.dubbo.config.invoker.DelegateProviderMetaDataInvoker.invoke(DelegateProviderMetaDataInvoker.java:48)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:52)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:61)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:74)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:41)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:77)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:71)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:131)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:37)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:37)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:98)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:96)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:168)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:50)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:79)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:105) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:74) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:41) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:77) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:71) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:131) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:37) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:37) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:98) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:96) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:168) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:50) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:79) ~[dubbo-2.6.0.jar:2.6.0]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_161]
+
+2018-08-19 15:50:00.547 ERROR 28948 --- [http-nio-6001-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.inner.service.dao.UserMapper.selectAllUser
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.inner.service.dao.UserMapper.selectAllUser
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:225)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:48)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:65)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy101.selectAllUser(Unknown Source)
+	at com.inner.service.service.UserServiceImpl.findAllUser(UserServiceImpl.java:48)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:45)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:71)
+	at com.alibaba.dubbo.config.invoker.DelegateProviderMetaDataInvoker.invoke(DelegateProviderMetaDataInvoker.java:48)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:52)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:61)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:74)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:41)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:77)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:71)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:131)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:37)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:37)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:98)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:96)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:168)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:50)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:79)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+] with root cause
+
+java.lang.RuntimeException: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.inner.service.dao.UserMapper.selectAllUser
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.inner.service.dao.UserMapper.selectAllUser
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:225)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:48)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:65)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy101.selectAllUser(Unknown Source)
+	at com.inner.service.service.UserServiceImpl.findAllUser(UserServiceImpl.java:48)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:45)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:71)
+	at com.alibaba.dubbo.config.invoker.DelegateProviderMetaDataInvoker.invoke(DelegateProviderMetaDataInvoker.java:48)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:52)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:61)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:74)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:41)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:77)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:71)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:131)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:37)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:37)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:98)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:96)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:168)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:50)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:79)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:105) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:74) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:41) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:77) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:71) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:131) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:37) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:37) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:98) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:96) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:168) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:50) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:79) ~[dubbo-2.6.0.jar:2.6.0]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_161]
+
+2018-08-19 15:50:00.823 ERROR 28948 --- [http-nio-6001-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.inner.service.dao.UserMapper.selectAllUser
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.inner.service.dao.UserMapper.selectAllUser
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:225)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:48)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:65)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy101.selectAllUser(Unknown Source)
+	at com.inner.service.service.UserServiceImpl.findAllUser(UserServiceImpl.java:48)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:45)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:71)
+	at com.alibaba.dubbo.config.invoker.DelegateProviderMetaDataInvoker.invoke(DelegateProviderMetaDataInvoker.java:48)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:52)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:61)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:74)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:41)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:77)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:71)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:131)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:37)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:37)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:98)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:96)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:168)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:50)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:79)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+] with root cause
+
+java.lang.RuntimeException: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.inner.service.dao.UserMapper.selectAllUser
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.inner.service.dao.UserMapper.selectAllUser
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:225)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:48)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:65)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy101.selectAllUser(Unknown Source)
+	at com.inner.service.service.UserServiceImpl.findAllUser(UserServiceImpl.java:48)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:45)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:71)
+	at com.alibaba.dubbo.config.invoker.DelegateProviderMetaDataInvoker.invoke(DelegateProviderMetaDataInvoker.java:48)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:52)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:61)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:74)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:41)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:77)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:71)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:131)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:37)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:37)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:98)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:96)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:168)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:50)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:79)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:105) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:74) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:41) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:77) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:71) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:131) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:37) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:37) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:98) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:96) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:168) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:50) ~[dubbo-2.6.0.jar:2.6.0]
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:79) ~[dubbo-2.6.0.jar:2.6.0]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_161]
+
+2018-08-19 15:54:06.528  INFO 30124 --- [main] com.outer.OuterApplication               : Starting OuterApplication on PC-201806231410 with PID 30124 (F:\workspace\outer\target\classes started by kecc in F:\workspace\outer)
+2018-08-19 15:54:06.528  INFO 30124 --- [main] com.outer.OuterApplication               : No active profile set, falling back to default profiles: default
+2018-08-19 15:54:06.606  INFO 30124 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@531f4093: startup date [Sun Aug 19 15:54:06 CST 2018]; root of context hierarchy
+2018-08-19 15:54:07.905  INFO 30124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-08-19 15:54:08.352  INFO 30124 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.context.properties.ConversionServiceDeducer$Factory' of type [org.springframework.boot.context.properties.ConversionServiceDeducer$Factory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-19 15:54:08.390  INFO 30124 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.dubbo-com.alibaba.dubbo.spring.boot.DubboProperties' of type [com.alibaba.dubbo.spring.boot.DubboProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-19 15:54:08.390  INFO 30124 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.dubbo.spring.boot.DubboConsumerAutoConfiguration' of type [com.alibaba.dubbo.spring.boot.DubboConsumerAutoConfiguration$$EnhancerBySpringCGLIB$$ce65af28] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-19 15:54:08.796  INFO 30124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6001 (http)
+2018-08-19 15:54:08.811  INFO 30124 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-19 15:54:08.811  INFO 30124 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-08-19 15:54:08.828  INFO 30124 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [F:\Tools\JDK\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;F:\Tools\JDK\jdk1.8.0_161\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;.]
+2018-08-19 15:54:08.954  INFO 30124 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-19 15:54:08.954  INFO 30124 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2348 ms
+2018-08-19 15:54:09.890  INFO 30124 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-19 15:54:09.890  INFO 30124 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2018-08-19 15:54:09.890  INFO 30124 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-19 15:54:09.890  INFO 30124 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-19 15:54:09.890  INFO 30124 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-19 15:54:09.890  INFO 30124 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpTraceFilter' to: [/*]
+2018-08-19 15:54:09.890  INFO 30124 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-19 15:54:10.166  INFO 30124 --- [ZkClient-EventThread-41-127.0.0.1:2161] org.I0Itec.zkclient.ZkEventThread        : Starting ZkClient event thread.
+2018-08-19 15:54:10.166  INFO 30124 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:zookeeper.version=3.4.8--1, built on 02/06/2016 03:18 GMT
+2018-08-19 15:54:10.166  INFO 30124 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:host.name=PC-201806231410
+2018-08-19 15:54:10.166  INFO 30124 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.version=1.8.0_161
+2018-08-19 15:54:10.166  INFO 30124 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.vendor=Oracle Corporation
+2018-08-19 15:54:10.166  INFO 30124 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.home=F:\Tools\JDK\jdk1.8.0_161\jre
+2018-08-19 15:54:10.166  INFO 30124 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.class.path=F:\Tools\JDK\jdk1.8.0_161\jre\lib\charsets.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\deploy.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\access-bridge-64.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\cldrdata.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\dnsns.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\jaccess.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\jfxrt.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\localedata.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\nashorn.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\sunec.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\sunjce_provider.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\sunmscapi.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\sunpkcs11.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\zipfs.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\javaws.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\jce.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\jfr.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\jfxswt.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\jsse.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\management-agent.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\plugin.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\resources.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\rt.jar;F:\workspace\outer\target\classes;F:\mvn-repos\repos\org\springframework\spring-beans\5.0.8.RELEASE\spring-beans-5.0.8.RELEASE.jar;F:\mvn-repos\repos\mysql\mysql-connector-java\5.1.46\mysql-connector-java-5.1.46.jar;F:\mvn-repos\repos\com\alibaba\druid\1.1.0\druid-1.1.0.jar;F:\mvn-repos\repos\com\alibaba\fastjson\1.2.15\fastjson-1.2.15.jar;F:\mvn-repos\repos\com\github\pagehelper\pagehelper\4.1.6\pagehelper-4.1.6.jar;F:\mvn-repos\repos\com\github\jsqlparser\jsqlparser\0.9.5\jsqlparser-0.9.5.jar;F:\mvn-repos\repos\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.9.6\jackson-dataformat-yaml-2.9.6.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-redis\1.4.7.RELEASE\spring-boot-starter-redis-1.4.7.RELEASE.jar;F:\mvn-repos\repos\org\springframework\data\spring-data-redis\2.0.9.RELEASE\spring-data-redis-2.0.9.RELEASE.jar;F:\mvn-repos\repos\org\springframework\data\spring-data-keyvalue\2.0.9.RELEASE\spring-data-keyvalue-2.0.9.RELEASE.jar;F:\mvn-repos\repos\org\springframework\data\spring-data-commons\2.0.9.RELEASE\spring-data-commons-2.0.9.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-tx\5.0.8.RELEASE\spring-tx-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-oxm\5.0.8.RELEASE\spring-oxm-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-context-support\5.0.8.RELEASE\spring-context-support-5.0.8.RELEASE.jar;F:\mvn-repos\repos\redis\clients\jedis\2.9.0\jedis-2.9.0.jar;F:\mvn-repos\repos\org\apache\commons\commons-pool2\2.5.0\commons-pool2-2.5.0.jar;F:\mvn-repos\repos\org\mybatis\spring\boot\mybatis-spring-boot-starter\1.3.1\mybatis-spring-boot-starter-1.3.1.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-jdbc\2.0.4.RELEASE\spring-boot-starter-jdbc-2.0.4.RELEASE.jar;F:\mvn-repos\repos\com\zaxxer\HikariCP\2.7.9\HikariCP-2.7.9.jar;F:\mvn-repos\repos\org\springframework\spring-jdbc\5.0.8.RELEASE\spring-jdbc-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\mybatis\spring\boot\mybatis-spring-boot-autoconfigure\1.3.1\mybatis-spring-boot-autoconfigure-1.3.1.jar;F:\mvn-repos\repos\org\mybatis\mybatis\3.4.5\mybatis-3.4.5.jar;F:\mvn-repos\repos\org\mybatis\mybatis-spring\1.3.1\mybatis-spring-1.3.1.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-web\2.0.4.RELEASE\spring-boot-starter-web-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter\2.0.4.RELEASE\spring-boot-starter-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot\2.0.4.RELEASE\spring-boot-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-autoconfigure\2.0.4.RELEASE\spring-boot-autoconfigure-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-logging\2.0.4.RELEASE\spring-boot-starter-logging-2.0.4.RELEASE.jar;F:\mvn-repos\repos\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;F:\mvn-repos\repos\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;F:\mvn-repos\repos\org\apache\logging\log4j\log4j-to-slf4j\2.10.0\log4j-to-slf4j-2.10.0.jar;F:\mvn-repos\repos\org\apache\logging\log4j\log4j-api\2.10.0\log4j-api-2.10.0.jar;F:\mvn-repos\repos\org\slf4j\jul-to-slf4j\1.7.25\jul-to-slf4j-1.7.25.jar;F:\mvn-repos\repos\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar;F:\mvn-repos\repos\org\springframework\spring-core\5.0.8.RELEASE\spring-core-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-jcl\5.0.8.RELEASE\spring-jcl-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\yaml\snakeyaml\1.19\snakeyaml-1.19.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-json\2.0.4.RELEASE\spring-boot-starter-json-2.0.4.RELEASE.jar;F:\mvn-repos\repos\com\fasterxml\jackson\core\jackson-databind\2.9.6\jackson-databind-2.9.6.jar;F:\mvn-repos\repos\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;F:\mvn-repos\repos\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.9.6\jackson-datatype-jdk8-2.9.6.jar;F:\mvn-repos\repos\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.9.6\jackson-datatype-jsr310-2.9.6.jar;F:\mvn-repos\repos\com\fasterxml\jackson\module\jackson-module-parameter-names\2.9.6\jackson-module-parameter-names-2.9.6.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-tomcat\2.0.4.RELEASE\spring-boot-starter-tomcat-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\apache\tomcat\embed\tomcat-embed-core\8.5.32\tomcat-embed-core-8.5.32.jar;F:\mvn-repos\repos\org\apache\tomcat\embed\tomcat-embed-el\8.5.32\tomcat-embed-el-8.5.32.jar;F:\mvn-repos\repos\org\apache\tomcat\embed\tomcat-embed-websocket\8.5.32\tomcat-embed-websocket-8.5.32.jar;F:\mvn-repos\repos\org\hibernate\validator\hibernate-validator\6.0.11.Final\hibernate-validator-6.0.11.Final.jar;F:\mvn-repos\repos\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar;F:\mvn-repos\repos\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar;F:\mvn-repos\repos\com\fasterxml\classmate\1.3.4\classmate-1.3.4.jar;F:\mvn-repos\repos\org\springframework\spring-web\5.0.8.RELEASE\spring-web-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-webmvc\5.0.8.RELEASE\spring-webmvc-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-aop\5.0.8.RELEASE\spring-aop-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-context\5.0.8.RELEASE\spring-context-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-expression\5.0.8.RELEASE\spring-expression-5.0.8.RELEASE.jar;F:\mvn-repos\repos\com\inner\base\inner-base-api\0.0.1-SNAPSHOT\inner-base-api-0.0.1-SNAPSHOT.jar;F:\Tools\JDK\jdk1.8.0_161\lib\jconsole.jar;F:\Tools\JDK\jdk1.8.0_161\lib\tools.jar;F:\mvn-repos\repos\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;F:\mvn-repos\repos\com\fasterxml\jackson\core\jackson-core\2.9.6\jackson-core-2.9.6.jar;F:\mvn-repos\repos\io\springfox\springfox-swagger2\2.6.1\springfox-swagger2-2.6.1.jar;F:\mvn-repos\repos\io\swagger\swagger-annotations\1.5.10\swagger-annotations-1.5.10.jar;F:\mvn-repos\repos\io\swagger\swagger-models\1.5.10\swagger-models-1.5.10.jar;F:\mvn-repos\repos\io\springfox\springfox-spi\2.6.1\springfox-spi-2.6.1.jar;F:\mvn-repos\repos\io\springfox\springfox-core\2.6.1\springfox-core-2.6.1.jar;F:\mvn-repos\repos\io\springfox\springfox-schema\2.6.1\springfox-schema-2.6.1.jar;F:\mvn-repos\repos\io\springfox\springfox-swagger-common\2.6.1\springfox-swagger-common-2.6.1.jar;F:\mvn-repos\repos\io\springfox\springfox-spring-web\2.6.1\springfox-spring-web-2.6.1.jar;F:\mvn-repos\repos\com\google\guava\guava\18.0\guava-18.0.jar;F:\mvn-repos\repos\org\springframework\plugin\spring-plugin-core\1.2.0.RELEASE\spring-plugin-core-1.2.0.RELEASE.jar;F:\mvn-repos\repos\org\springframework\plugin\spring-plugin-metadata\1.2.0.RELEASE\spring-plugin-metadata-1.2.0.RELEASE.jar;F:\mvn-repos\repos\org\mapstruct\mapstruct\1.0.0.Final\mapstruct-1.0.0.Final.jar;F:\mvn-repos\repos\io\springfox\springfox-swagger-ui\2.6.1\springfox-swagger-ui-2.6.1.jar;F:\mvn-repos\repos\org\projectlombok\lombok\1.16.22\lombok-1.16.22.jar;F:\mvn-repos\repos\com\alibaba\spring\boot\dubbo-spring-boot-starter\2.0.0\dubbo-spring-boot-starter-2.0.0.jar;F:\mvn-repos\repos\com\alibaba\dubbo\2.6.0\dubbo-2.6.0.jar;F:\mvn-repos\repos\org\javassist\javassist\3.20.0-GA\javassist-3.20.0-GA.jar;F:\mvn-repos\repos\org\jboss\netty\netty\3.2.5.Final\netty-3.2.5.Final.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-actuator\2.0.4.RELEASE\spring-boot-starter-actuator-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-actuator-autoconfigure\2.0.4.RELEASE\spring-boot-actuator-autoconfigure-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-actuator\2.0.4.RELEASE\spring-boot-actuator-2.0.4.RELEASE.jar;F:\mvn-repos\repos\io\micrometer\micrometer-core\1.0.6\micrometer-core-1.0.6.jar;F:\mvn-repos\repos\org\hdrhistogram\HdrHistogram\2.1.10\HdrHistogram-2.1.10.jar;F:\mvn-repos\repos\org\latencyutils\LatencyUtils\2.0.3\LatencyUtils-2.0.3.jar;F:\mvn-repos\repos\org\apache\zookeeper\zookeeper\3.4.8\zookeeper-3.4.8.jar;F:\mvn-repos\repos\log4j\log4j\1.2.16\log4j-1.2.16.jar;F:\mvn-repos\repos\jline\jline\0.9.94\jline-0.9.94.jar;F:\mvn-repos\repos\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;F:\mvn-repos\repos\com\101tec\zkclient\0.10\zkclient-0.10.jar;F:\Tools\IDE\idea\lib\idea_rt.jar;F:\Tools\IDE\idea\lib\rt\debugger-agent.jar
+2018-08-19 15:54:10.182  INFO 30124 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.library.path=F:\Tools\JDK\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;F:\Tools\JDK\jdk1.8.0_161\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;.
+2018-08-19 15:54:10.182  INFO 30124 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
+2018-08-19 15:54:10.182  INFO 30124 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.compiler=<NA>
+2018-08-19 15:54:10.182  INFO 30124 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:os.name=Windows 10
+2018-08-19 15:54:10.182  INFO 30124 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:os.arch=amd64
+2018-08-19 15:54:10.182  INFO 30124 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:os.version=10.0
+2018-08-19 15:54:10.182  INFO 30124 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:user.name=kecc
+2018-08-19 15:54:10.182  INFO 30124 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:user.home=C:\Users\Administrator
+2018-08-19 15:54:10.182  INFO 30124 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:user.dir=F:\workspace\outer
+2018-08-19 15:54:10.182  INFO 30124 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=127.0.0.1:2161 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@46161cb8
+2018-08-19 15:54:10.197  INFO 30124 --- [DubboZkclientConnector] org.I0Itec.zkclient.ZkClient             : Waiting for keeper state SyncConnected
+2018-08-19 15:54:10.197  INFO 30124 --- [DubboZkclientConnector-SendThread(127.0.0.1:2161)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 127.0.0.1/127.0.0.1:2161. Will not attempt to authenticate using SASL (unknown error)
+2018-08-19 15:54:10.197  INFO 30124 --- [DubboZkclientConnector-SendThread(127.0.0.1:2161)] org.apache.zookeeper.ClientCnxn          : Socket connection established to 127.0.0.1/127.0.0.1:2161, initiating session
+2018-08-19 15:54:10.213  INFO 30124 --- [DubboZkclientConnector-SendThread(127.0.0.1:2161)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server 127.0.0.1/127.0.0.1:2161, sessionid = 0x16550aade5f000a, negotiated timeout = 30000
+2018-08-19 15:54:10.228  INFO 30124 --- [DubboZkclientConnector-EventThread] org.I0Itec.zkclient.ZkClient             : zookeeper state changed (SyncConnected)
+2018-08-19 15:54:10.922  INFO 30124 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/add],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public int com.outer.controller.UserController.addUser(com.inner.api.bean.User)
+2018-08-19 15:54:10.922  INFO 30124 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/all/{pageNum}/{pageSize}],methods=[GET]}" onto public java.lang.Object com.outer.controller.UserController.findAllUser(int,int)
+2018-08-19 15:54:10.922  INFO 30124 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-08-19 15:54:10.922  INFO 30124 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-08-19 15:54:10.922  INFO 30124 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-08-19 15:54:10.922  INFO 30124 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-08-19 15:54:10.922  INFO 30124 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-19 15:54:10.922  INFO 30124 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-19 15:54:11.046  INFO 30124 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2018-08-19 15:54:11.062  INFO 30124 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2018-08-19 15:54:11.062  INFO 30124 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2018-08-19 15:54:11.062  INFO 30124 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-19 15:54:11.264  INFO 30124 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-19 15:54:11.453  INFO 30124 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@531f4093: startup date [Sun Aug 19 15:54:06 CST 2018]; root of context hierarchy
+2018-08-19 15:54:11.512  INFO 30124 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-19 15:54:11.512  INFO 30124 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-19 15:54:12.016  WARN 30124 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-08-19 15:54:12.066  INFO 30124 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-19 15:54:12.081  INFO 30124 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-08-19 15:54:12.081  INFO 30124 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2018-08-19 15:54:12.097  INFO 30124 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2018-08-19 15:54:12.112  INFO 30124 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-08-19 15:54:12.159  INFO 30124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 6001 (http) with context path ''
+2018-08-19 15:54:12.175  INFO 30124 --- [main] com.outer.OuterApplication               : Started OuterApplication in 6.752 seconds (JVM running for 8.055)
+2018-08-19 15:54:12.842  INFO 30124 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-19 15:54:12.842  INFO 30124 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-19 15:54:12.865  INFO 30124 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2018-08-19 18:06:45.821  INFO 45728 --- [main] com.outer.OuterApplication               : Starting OuterApplication on PC-201806231410 with PID 45728 (F:\workspace\outer\target\classes started by kecc in F:\workspace\outer)
+2018-08-19 18:06:45.825  INFO 45728 --- [main] com.outer.OuterApplication               : No active profile set, falling back to default profiles: default
+2018-08-19 18:06:45.961  INFO 45728 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@33b1c5c5: startup date [Sun Aug 19 18:06:45 CST 2018]; root of context hierarchy
+2018-08-19 18:06:47.278  INFO 45728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-08-19 18:06:47.705  INFO 45728 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.context.properties.ConversionServiceDeducer$Factory' of type [org.springframework.boot.context.properties.ConversionServiceDeducer$Factory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-19 18:06:47.748  INFO 45728 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.dubbo-com.alibaba.dubbo.spring.boot.DubboProperties' of type [com.alibaba.dubbo.spring.boot.DubboProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-19 18:06:47.749  INFO 45728 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.dubbo.spring.boot.DubboConsumerAutoConfiguration' of type [com.alibaba.dubbo.spring.boot.DubboConsumerAutoConfiguration$$EnhancerBySpringCGLIB$$988d97a8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-19 18:06:48.188  INFO 45728 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6001 (http)
+2018-08-19 18:06:48.220  INFO 45728 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-19 18:06:48.220  INFO 45728 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-08-19 18:06:48.228  INFO 45728 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [F:\Tools\JDK\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;F:\Tools\JDK\jdk1.8.0_161\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;.]
+2018-08-19 18:06:48.348  INFO 45728 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-19 18:06:48.349  INFO 45728 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2389 ms
+2018-08-19 18:06:49.267  INFO 45728 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-19 18:06:49.268  INFO 45728 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2018-08-19 18:06:49.268  INFO 45728 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-19 18:06:49.268  INFO 45728 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-19 18:06:49.269  INFO 45728 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-19 18:06:49.269  INFO 45728 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpTraceFilter' to: [/*]
+2018-08-19 18:06:49.269  INFO 45728 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-19 18:06:49.550  INFO 45728 --- [ZkClient-EventThread-41-127.0.0.1:2161] org.I0Itec.zkclient.ZkEventThread        : Starting ZkClient event thread.
+2018-08-19 18:06:49.556  INFO 45728 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:zookeeper.version=3.4.8--1, built on 02/06/2016 03:18 GMT
+2018-08-19 18:06:49.556  INFO 45728 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:host.name=PC-201806231410
+2018-08-19 18:06:49.556  INFO 45728 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.version=1.8.0_161
+2018-08-19 18:06:49.556  INFO 45728 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.vendor=Oracle Corporation
+2018-08-19 18:06:49.556  INFO 45728 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.home=F:\Tools\JDK\jdk1.8.0_161\jre
+2018-08-19 18:06:49.556  INFO 45728 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.class.path=F:\Tools\JDK\jdk1.8.0_161\jre\lib\charsets.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\deploy.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\access-bridge-64.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\cldrdata.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\dnsns.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\jaccess.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\jfxrt.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\localedata.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\nashorn.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\sunec.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\sunjce_provider.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\sunmscapi.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\sunpkcs11.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\ext\zipfs.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\javaws.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\jce.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\jfr.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\jfxswt.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\jsse.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\management-agent.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\plugin.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\resources.jar;F:\Tools\JDK\jdk1.8.0_161\jre\lib\rt.jar;F:\workspace\outer\target\classes;F:\mvn-repos\repos\org\springframework\spring-beans\5.0.8.RELEASE\spring-beans-5.0.8.RELEASE.jar;F:\mvn-repos\repos\mysql\mysql-connector-java\5.1.46\mysql-connector-java-5.1.46.jar;F:\mvn-repos\repos\com\alibaba\druid\1.1.0\druid-1.1.0.jar;F:\mvn-repos\repos\com\alibaba\fastjson\1.2.15\fastjson-1.2.15.jar;F:\mvn-repos\repos\com\github\pagehelper\pagehelper\4.1.6\pagehelper-4.1.6.jar;F:\mvn-repos\repos\com\github\jsqlparser\jsqlparser\0.9.5\jsqlparser-0.9.5.jar;F:\mvn-repos\repos\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.9.6\jackson-dataformat-yaml-2.9.6.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-redis\1.4.7.RELEASE\spring-boot-starter-redis-1.4.7.RELEASE.jar;F:\mvn-repos\repos\org\springframework\data\spring-data-redis\2.0.9.RELEASE\spring-data-redis-2.0.9.RELEASE.jar;F:\mvn-repos\repos\org\springframework\data\spring-data-keyvalue\2.0.9.RELEASE\spring-data-keyvalue-2.0.9.RELEASE.jar;F:\mvn-repos\repos\org\springframework\data\spring-data-commons\2.0.9.RELEASE\spring-data-commons-2.0.9.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-tx\5.0.8.RELEASE\spring-tx-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-oxm\5.0.8.RELEASE\spring-oxm-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-context-support\5.0.8.RELEASE\spring-context-support-5.0.8.RELEASE.jar;F:\mvn-repos\repos\redis\clients\jedis\2.9.0\jedis-2.9.0.jar;F:\mvn-repos\repos\org\apache\commons\commons-pool2\2.5.0\commons-pool2-2.5.0.jar;F:\mvn-repos\repos\org\mybatis\spring\boot\mybatis-spring-boot-starter\1.3.1\mybatis-spring-boot-starter-1.3.1.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-jdbc\2.0.4.RELEASE\spring-boot-starter-jdbc-2.0.4.RELEASE.jar;F:\mvn-repos\repos\com\zaxxer\HikariCP\2.7.9\HikariCP-2.7.9.jar;F:\mvn-repos\repos\org\springframework\spring-jdbc\5.0.8.RELEASE\spring-jdbc-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\mybatis\spring\boot\mybatis-spring-boot-autoconfigure\1.3.1\mybatis-spring-boot-autoconfigure-1.3.1.jar;F:\mvn-repos\repos\org\mybatis\mybatis\3.4.5\mybatis-3.4.5.jar;F:\mvn-repos\repos\org\mybatis\mybatis-spring\1.3.1\mybatis-spring-1.3.1.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-web\2.0.4.RELEASE\spring-boot-starter-web-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter\2.0.4.RELEASE\spring-boot-starter-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot\2.0.4.RELEASE\spring-boot-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-autoconfigure\2.0.4.RELEASE\spring-boot-autoconfigure-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-logging\2.0.4.RELEASE\spring-boot-starter-logging-2.0.4.RELEASE.jar;F:\mvn-repos\repos\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;F:\mvn-repos\repos\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;F:\mvn-repos\repos\org\apache\logging\log4j\log4j-to-slf4j\2.10.0\log4j-to-slf4j-2.10.0.jar;F:\mvn-repos\repos\org\apache\logging\log4j\log4j-api\2.10.0\log4j-api-2.10.0.jar;F:\mvn-repos\repos\org\slf4j\jul-to-slf4j\1.7.25\jul-to-slf4j-1.7.25.jar;F:\mvn-repos\repos\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar;F:\mvn-repos\repos\org\springframework\spring-core\5.0.8.RELEASE\spring-core-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-jcl\5.0.8.RELEASE\spring-jcl-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\yaml\snakeyaml\1.19\snakeyaml-1.19.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-json\2.0.4.RELEASE\spring-boot-starter-json-2.0.4.RELEASE.jar;F:\mvn-repos\repos\com\fasterxml\jackson\core\jackson-databind\2.9.6\jackson-databind-2.9.6.jar;F:\mvn-repos\repos\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;F:\mvn-repos\repos\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.9.6\jackson-datatype-jdk8-2.9.6.jar;F:\mvn-repos\repos\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.9.6\jackson-datatype-jsr310-2.9.6.jar;F:\mvn-repos\repos\com\fasterxml\jackson\module\jackson-module-parameter-names\2.9.6\jackson-module-parameter-names-2.9.6.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-tomcat\2.0.4.RELEASE\spring-boot-starter-tomcat-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\apache\tomcat\embed\tomcat-embed-core\8.5.32\tomcat-embed-core-8.5.32.jar;F:\mvn-repos\repos\org\apache\tomcat\embed\tomcat-embed-el\8.5.32\tomcat-embed-el-8.5.32.jar;F:\mvn-repos\repos\org\apache\tomcat\embed\tomcat-embed-websocket\8.5.32\tomcat-embed-websocket-8.5.32.jar;F:\mvn-repos\repos\org\hibernate\validator\hibernate-validator\6.0.11.Final\hibernate-validator-6.0.11.Final.jar;F:\mvn-repos\repos\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar;F:\mvn-repos\repos\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar;F:\mvn-repos\repos\com\fasterxml\classmate\1.3.4\classmate-1.3.4.jar;F:\mvn-repos\repos\org\springframework\spring-web\5.0.8.RELEASE\spring-web-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-webmvc\5.0.8.RELEASE\spring-webmvc-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-aop\5.0.8.RELEASE\spring-aop-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-context\5.0.8.RELEASE\spring-context-5.0.8.RELEASE.jar;F:\mvn-repos\repos\org\springframework\spring-expression\5.0.8.RELEASE\spring-expression-5.0.8.RELEASE.jar;F:\mvn-repos\repos\com\inner\base\inner-base-api\0.0.1-SNAPSHOT\inner-base-api-0.0.1-SNAPSHOT.jar;F:\Tools\JDK\jdk1.8.0_161\lib\jconsole.jar;F:\Tools\JDK\jdk1.8.0_161\lib\tools.jar;F:\mvn-repos\repos\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;F:\mvn-repos\repos\com\fasterxml\jackson\core\jackson-core\2.9.6\jackson-core-2.9.6.jar;F:\mvn-repos\repos\io\springfox\springfox-swagger2\2.6.1\springfox-swagger2-2.6.1.jar;F:\mvn-repos\repos\io\swagger\swagger-annotations\1.5.10\swagger-annotations-1.5.10.jar;F:\mvn-repos\repos\io\swagger\swagger-models\1.5.10\swagger-models-1.5.10.jar;F:\mvn-repos\repos\io\springfox\springfox-spi\2.6.1\springfox-spi-2.6.1.jar;F:\mvn-repos\repos\io\springfox\springfox-core\2.6.1\springfox-core-2.6.1.jar;F:\mvn-repos\repos\io\springfox\springfox-schema\2.6.1\springfox-schema-2.6.1.jar;F:\mvn-repos\repos\io\springfox\springfox-swagger-common\2.6.1\springfox-swagger-common-2.6.1.jar;F:\mvn-repos\repos\io\springfox\springfox-spring-web\2.6.1\springfox-spring-web-2.6.1.jar;F:\mvn-repos\repos\com\google\guava\guava\18.0\guava-18.0.jar;F:\mvn-repos\repos\org\springframework\plugin\spring-plugin-core\1.2.0.RELEASE\spring-plugin-core-1.2.0.RELEASE.jar;F:\mvn-repos\repos\org\springframework\plugin\spring-plugin-metadata\1.2.0.RELEASE\spring-plugin-metadata-1.2.0.RELEASE.jar;F:\mvn-repos\repos\org\mapstruct\mapstruct\1.0.0.Final\mapstruct-1.0.0.Final.jar;F:\mvn-repos\repos\io\springfox\springfox-swagger-ui\2.6.1\springfox-swagger-ui-2.6.1.jar;F:\mvn-repos\repos\org\projectlombok\lombok\1.16.22\lombok-1.16.22.jar;F:\mvn-repos\repos\com\alibaba\spring\boot\dubbo-spring-boot-starter\2.0.0\dubbo-spring-boot-starter-2.0.0.jar;F:\mvn-repos\repos\com\alibaba\dubbo\2.6.0\dubbo-2.6.0.jar;F:\mvn-repos\repos\org\javassist\javassist\3.20.0-GA\javassist-3.20.0-GA.jar;F:\mvn-repos\repos\org\jboss\netty\netty\3.2.5.Final\netty-3.2.5.Final.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-starter-actuator\2.0.4.RELEASE\spring-boot-starter-actuator-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-actuator-autoconfigure\2.0.4.RELEASE\spring-boot-actuator-autoconfigure-2.0.4.RELEASE.jar;F:\mvn-repos\repos\org\springframework\boot\spring-boot-actuator\2.0.4.RELEASE\spring-boot-actuator-2.0.4.RELEASE.jar;F:\mvn-repos\repos\io\micrometer\micrometer-core\1.0.6\micrometer-core-1.0.6.jar;F:\mvn-repos\repos\org\hdrhistogram\HdrHistogram\2.1.10\HdrHistogram-2.1.10.jar;F:\mvn-repos\repos\org\latencyutils\LatencyUtils\2.0.3\LatencyUtils-2.0.3.jar;F:\mvn-repos\repos\org\apache\zookeeper\zookeeper\3.4.8\zookeeper-3.4.8.jar;F:\mvn-repos\repos\log4j\log4j\1.2.16\log4j-1.2.16.jar;F:\mvn-repos\repos\jline\jline\0.9.94\jline-0.9.94.jar;F:\mvn-repos\repos\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;F:\mvn-repos\repos\com\101tec\zkclient\0.10\zkclient-0.10.jar;F:\Tools\IDE\idea\lib\idea_rt.jar;F:\Tools\IDE\idea\lib\rt\debugger-agent.jar
+2018-08-19 18:06:49.559  INFO 45728 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.library.path=F:\Tools\JDK\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;F:\Tools\JDK\jdk1.8.0_161\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;.
+2018-08-19 18:06:49.559  INFO 45728 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
+2018-08-19 18:06:49.559  INFO 45728 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:java.compiler=<NA>
+2018-08-19 18:06:49.559  INFO 45728 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:os.name=Windows 10
+2018-08-19 18:06:49.560  INFO 45728 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:os.arch=amd64
+2018-08-19 18:06:49.560  INFO 45728 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:os.version=10.0
+2018-08-19 18:06:49.560  INFO 45728 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:user.name=kecc
+2018-08-19 18:06:49.560  INFO 45728 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:user.home=C:\Users\Administrator
+2018-08-19 18:06:49.560  INFO 45728 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Client environment:user.dir=F:\workspace\outer
+2018-08-19 18:06:49.561  INFO 45728 --- [DubboZkclientConnector] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=127.0.0.1:2161 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@7e8b9c6d
+2018-08-19 18:06:49.586  INFO 45728 --- [DubboZkclientConnector] org.I0Itec.zkclient.ZkClient             : Waiting for keeper state SyncConnected
+2018-08-19 18:06:49.591  INFO 45728 --- [DubboZkclientConnector-SendThread(127.0.0.1:2161)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 127.0.0.1/127.0.0.1:2161. Will not attempt to authenticate using SASL (unknown error)
+2018-08-19 18:06:49.593  INFO 45728 --- [DubboZkclientConnector-SendThread(127.0.0.1:2161)] org.apache.zookeeper.ClientCnxn          : Socket connection established to 127.0.0.1/127.0.0.1:2161, initiating session
+2018-08-19 18:06:49.608  INFO 45728 --- [DubboZkclientConnector-SendThread(127.0.0.1:2161)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server 127.0.0.1/127.0.0.1:2161, sessionid = 0x16550aade5f0011, negotiated timeout = 30000
+2018-08-19 18:06:49.610  INFO 45728 --- [DubboZkclientConnector-EventThread] org.I0Itec.zkclient.ZkClient             : zookeeper state changed (SyncConnected)
+2018-08-19 18:06:50.558  INFO 45728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/all/{pageNum}/{pageSize}],methods=[GET]}" onto public java.lang.Object com.outer.controller.UserController.findAllUser(int,int)
+2018-08-19 18:06:50.560  INFO 45728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/add],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public int com.outer.controller.UserController.addUser(com.inner.api.bean.User)
+2018-08-19 18:06:50.561  INFO 45728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-08-19 18:06:50.564  INFO 45728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-08-19 18:06:50.565  INFO 45728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-08-19 18:06:50.566  INFO 45728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-08-19 18:06:50.571  INFO 45728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-19 18:06:50.571  INFO 45728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-19 18:06:50.709  INFO 45728 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2018-08-19 18:06:50.733  INFO 45728 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2018-08-19 18:06:50.735  INFO 45728 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2018-08-19 18:06:50.736  INFO 45728 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-19 18:06:50.997  INFO 45728 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-19 18:06:51.220  INFO 45728 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@33b1c5c5: startup date [Sun Aug 19 18:06:45 CST 2018]; root of context hierarchy
+2018-08-19 18:06:51.282  INFO 45728 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-19 18:06:51.282  INFO 45728 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-19 18:06:51.827  WARN 45728 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-08-19 18:06:51.883  INFO 45728 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-19 18:06:51.898  INFO 45728 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-08-19 18:06:51.898  INFO 45728 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2018-08-19 18:06:51.920  INFO 45728 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2018-08-19 18:06:51.939  INFO 45728 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-08-19 18:06:51.990  INFO 45728 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 6001 (http) with context path ''
+2018-08-19 18:06:51.996  INFO 45728 --- [main] com.outer.OuterApplication               : Started OuterApplication in 7.163 seconds (JVM running for 8.349)
+2018-08-19 18:06:52.730  INFO 45728 --- [RMI TCP Connection(8)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-19 18:06:52.731  INFO 45728 --- [RMI TCP Connection(8)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-19 18:06:52.754  INFO 45728 --- [RMI TCP Connection(8)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2018-08-19 20:23:52.809  WARN 45728 --- [DubboZkclientConnector-SendThread(127.0.0.1:2161)] org.apache.zookeeper.ClientCnxn          : Client session timed out, have not heard from server in 2667020ms for sessionid 0x16550aade5f0011
+2018-08-19 20:23:52.811  INFO 45728 --- [DubboZkclientConnector-SendThread(127.0.0.1:2161)] org.apache.zookeeper.ClientCnxn          : Client session timed out, have not heard from server in 2667020ms for sessionid 0x16550aade5f0011, closing socket connection and attempting reconnect
+2018-08-19 20:23:52.913  INFO 45728 --- [DubboZkclientConnector-EventThread] org.I0Itec.zkclient.ZkClient             : zookeeper state changed (Disconnected)
+2018-08-19 20:23:54.618  INFO 45728 --- [DubboZkclientConnector-SendThread(127.0.0.1:2161)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 127.0.0.1/127.0.0.1:2161. Will not attempt to authenticate using SASL (unknown error)
+2018-08-19 20:23:54.619  INFO 45728 --- [DubboZkclientConnector-SendThread(127.0.0.1:2161)] org.apache.zookeeper.ClientCnxn          : Socket connection established to 127.0.0.1/127.0.0.1:2161, initiating session
+2018-08-19 20:23:54.631  WARN 45728 --- [DubboZkclientConnector-SendThread(127.0.0.1:2161)] org.apache.zookeeper.ClientCnxn          : Unable to reconnect to ZooKeeper service, session 0x16550aade5f0011 has expired
+2018-08-19 20:23:54.632  INFO 45728 --- [DubboZkclientConnector-SendThread(127.0.0.1:2161)] org.apache.zookeeper.ClientCnxn          : Unable to reconnect to ZooKeeper service, session 0x16550aade5f0011 has expired, closing socket connection
+2018-08-19 20:23:54.632  INFO 45728 --- [DubboZkclientConnector-EventThread] org.I0Itec.zkclient.ZkClient             : zookeeper state changed (Expired)
+2018-08-19 20:23:54.632  INFO 45728 --- [DubboZkclientConnector-EventThread] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=127.0.0.1:2161 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@7e8b9c6d
+2018-08-19 20:23:54.635  INFO 45728 --- [DubboZkclientConnector-EventThread] org.apache.zookeeper.ClientCnxn          : EventThread shut down for session: 0x16550aade5f0011
+2018-08-19 20:23:54.646  INFO 45728 --- [DubboZkclientConnector-SendThread(127.0.0.1:2161)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 127.0.0.1/127.0.0.1:2161. Will not attempt to authenticate using SASL (unknown error)
+2018-08-19 20:23:54.647  INFO 45728 --- [DubboZkclientConnector-SendThread(127.0.0.1:2161)] org.apache.zookeeper.ClientCnxn          : Socket connection established to 127.0.0.1/127.0.0.1:2161, initiating session
+2018-08-19 20:23:54.656  INFO 45728 --- [DubboZkclientConnector-SendThread(127.0.0.1:2161)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server 127.0.0.1/127.0.0.1:2161, sessionid = 0x16550aade5f0017, negotiated timeout = 30000
+2018-08-19 20:23:54.657  INFO 45728 --- [DubboZkclientConnector-EventThread] org.I0Itec.zkclient.ZkClient             : zookeeper state changed (SyncConnected)
+2018-08-19 20:23:54.709  WARN 45728 --- [DubboZkclientConnector-SendThread(127.0.0.1:2161)] org.apache.zookeeper.ClientCnxn          : Session 0x16550aade5f0017 for server 127.0.0.1/127.0.0.1:2161, unexpected error, closing socket connection and attempting reconnect
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_161]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_161]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_161]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_161]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_161]
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doIO(ClientCnxnSocketNIO.java:68) ~[zookeeper-3.4.8.jar:3.4.8--1]
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:366) ~[zookeeper-3.4.8.jar:3.4.8--1]
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141) ~[zookeeper-3.4.8.jar:3.4.8--1]
+
