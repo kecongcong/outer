@@ -1,8 +1,8 @@
 package com.outer.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.inner.api.bean.User;
-import com.inner.api.service.UserService;
+import com.inner.api.base.UserService;
+import com.inner.api.base.bean.User;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
