@@ -8,6 +8,8 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 /**
  * 测试controller
  *
@@ -23,7 +25,7 @@ public class UserController {
     @ApiOperation(value = "新增用户信息", notes = "新增用户信息")
     @ApiImplicitParam(name = "user", value = "用户详细实体", required = true, dataType = "User")
     @PostMapping(value = "/add", produces = {"application/json;charset=UTF-8"})
-    public int addUser(User user) {
+    public int addUser(@RequestBody @Valid User user) {
         return userService.addUser(user);
     }
 
